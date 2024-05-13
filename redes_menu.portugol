@@ -1,0 +1,63 @@
+programa redes_menu
+
+funcao principal()
+    inteiro opcao
+    faca
+        escreva("Escolha uma opção:")
+        escreva("1. Listar interfaces de rede e endereços IP")
+        escreva("2. Verificar conectividade com um host externo")
+        escreva("3. Reiniciar o serviço de rede")
+        escreva("4. Configurar uma interface de rede")
+        escreva("5. Fim")
+        leia(opcao)
+
+        escolha opcao
+            caso 1:
+                listar_interfaces()
+            caso 2:
+                verificar_conectividade()
+            caso 3:
+                reiniciar_servico_rede()
+            caso 4:
+                configurar_interface()
+            caso 5:
+                escreva("Fim do programa.")
+                pare
+            caso contrario:
+                escreva("Opção inválida. Tente novamente.")
+        fim_escolha
+    enquanto verdadeiro
+fim_funcao
+
+funcao listar_interfaces()
+    escreva("Listando interfaces de rede e endereços IP:")
+    // Comando para listar interfaces e IPs seria executado aqui
+fim_funcao
+
+funcao verificar_conectividade()
+    escreva("Verificando conectividade com o host externo (google.com):")
+    // Comando para verificar conectividade seria executado aqui
+fim_funcao
+
+funcao reiniciar_servico_rede()
+    escreva("Reiniciando o serviço de rede...")
+    // Comando para reiniciar serviço de rede seria executado aqui
+fim_funcao
+
+funcao configurar_interface()
+    cadeia nome_interface
+    cadeia endereco_ip
+    cadeia mascara_rede
+
+    escreva("Digite o nome da interface de rede (ex: eth0):")
+    leia(nome_interface)
+    escreva("Digite o endereço IP desejado:")
+    leia(endereco_ip)
+    escreva("Digite a máscara de rede (ex: 255.255.255.0):")
+    leia(mascara_rede)
+
+    // Comando para configurar interface seria executado aqui
+    escreva("Interface " + nome_interface + " configurada com IP " + endereco_ip + " e máscara " + mascara_rede + ".")
+fim_funcao
+
+fim_programa
